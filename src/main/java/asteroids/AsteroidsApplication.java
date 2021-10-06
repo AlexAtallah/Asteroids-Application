@@ -17,18 +17,14 @@ import javafx.scene.text.Text;
 
 public class AsteroidsApplication extends Application {
 
-    public static int WIDTH = 300;
-    public static int HEIGHT = 200;
+    public static int WIDTH = 700;
+    public static int HEIGHT = 600;
 
     public static void main(String[] args) throws Exception {
         launch(args);
 
     }
 
-    public static int partsCompleted() {
-        // State how many parts you have completed using the return value of this method
-        return 4;
-    }
 
     public void start(Stage app) {
         Pane pane = new Pane();
@@ -68,6 +64,7 @@ public class AsteroidsApplication extends Application {
         scene.setOnKeyReleased(event -> {
             pressedKeys.put(event.getCode(), Boolean.FALSE);
         });
+        
 
         new AnimationTimer() {
 
@@ -82,18 +79,18 @@ public class AsteroidsApplication extends Application {
                     }
                 }
 
-                if (pressedKeys.getOrDefault(KeyCode.LEFT, false)) {
+                if (pressedKeys.getOrDefault(KeyCode.A, false)) {
                     ship.turnLeft();
                 }
 
-                if (pressedKeys.getOrDefault(KeyCode.RIGHT, false)) {
+                if (pressedKeys.getOrDefault(KeyCode.D, false)) {
                     ship.turnRight();
                 }
 
-                if (pressedKeys.getOrDefault(KeyCode.UP, false)) {
+                if (pressedKeys.getOrDefault(KeyCode.W, false)) {
                     ship.accelerate();
                 }
-                if (pressedKeys.getOrDefault(KeyCode.W, false) && projectiles.size() < 3) {
+                if (pressedKeys.getOrDefault(KeyCode.SPACE, false) && projectiles.size() < 3) {
 
                     Projectile projectile = new Projectile((int) ship.getCharacter().getTranslateX(), (int) ship.getCharacter().getTranslateY());
                     projectile.getCharacter().setRotate(ship.getCharacter().getRotate());
