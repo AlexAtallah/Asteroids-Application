@@ -6,9 +6,8 @@
   It stops whens the ship collides with an asteroid and the projectiles will disappear when they come in contact with an asteroid, removing both from the screen.
   Over time, the game keeps on creating more and more asteroids and each one that gets destroyed gives you points.</p>
   <h1 align="center">SAMPLE VIDEO</h1>
-  <p align="center">
+    ![Asteroids! 2021-10-06 19-11-14](https://user-images.githubusercontent.com/85928033/136245637-62ea8589-d9ff-4a4d-af5b-34658db306ee.gif)
 
-  </p>
-  
+
 
 </div>
