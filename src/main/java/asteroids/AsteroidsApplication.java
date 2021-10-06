@@ -25,10 +25,6 @@ public class AsteroidsApplication extends Application {
 
     }
 
-    public static int partsCompleted() {
-        // State how many parts you have completed using the return value of this method
-        return 4;
-    }
 
     public void start(Stage app) {
         Pane pane = new Pane();
